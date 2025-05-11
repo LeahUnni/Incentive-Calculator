@@ -35,25 +35,25 @@ CREATE TABLE sales_data (
 -- Insert sample data into budget table
 INSERT INTO budget (date, location, budget_code, name, department, budget)
 VALUES
-('2025-01-01', 'New York', 'B001', 'Store A', 'Electronics', 100000.00),
-('2025-01-01', 'Los Angeles', 'B002', 'Store B', 'Clothing', 150000.00),
-('2025-01-01', 'Chicago', 'B003', 'Store C', 'Furniture', 120000.00);
+('2023-07-01', 'Plaza', 'PL1', 'Store A', 'FLR', 100000.00),
+('2023-07-01', 'Plaza', 'PL2', 'Store B', 'FMW', 150000.00),
+('2023-07-01', 'FDK', 'PL1', 'Store C', 'FCW', 120000.00);
 
 -- Insert sample data into employee_data table
 INSERT INTO employee_data (emp_no, emp_name, location_group, location, hire_date, position, attendance)
 VALUES
-(1, 'John Doe', 'Group A', 'New York', '2020-05-15', 'tailor supervisor', 25),
-(2, 'Jane Smith', 'Group B', 'Los Angeles', '2019-03-10', 'cashier', 28),
-(3, 'Alice Johnson', 'Group A', 'New York', '2021-07-20', 'service staff', 30),
-(4, 'Bob Brown', 'Group C', 'Chicago', '2018-11-05', 'storekeeper', 27),
-(5, 'Charlie Davis', 'Group B', 'Los Angeles', '2022-01-12', 'tailor', 26);
+(0135, 'User A', 'CATY', 'CCU', '2001-05-15', 'tailor supervisor', 25),
+(01498, 'User B', 'LOREO', 'PU-CGU', '2011-03-10', 'Sales associate', 28),
+(06953, 'User C', 'CATY', 'PE-YSL', '2021-07-20', 'Sales coordinator', 30),
+(07275, 'User D', 'CATY', 'PU-CGU', '2018-11-05', 'storekeeper', 27),
+(08324, 'User E', 'COTY', 'CCU', '2022-01-12', 'tailor', 26);
 
 -- Insert sample data into sales_data table
 INSERT INTO sales_data (chain_name, store_name, storename3, salesperson_id, salesperson_name, division_name, brand_name, dept_name, tran_type, qty, resale_value, legacy_department)
 VALUES
-('Chain X', 'Store A', 'Group A', 101, 'Salesperson 1', 'Division 1', 'Brand X', 'Electronics', 'Retail', 50, 50000.00, 'Electronics'),
-('Chain X', 'Store B', 'Group B', 102, 'Salesperson 2', 'Division 2', 'Brand Y', 'Clothing', 'Retail', 70, 120000.00, 'Clothing'),
-('Chain Y', 'Store C', 'Group C', 103, 'Salesperson 3', 'Division 3', 'Brand Z', 'Furniture', 'Wholesale', 30, 90000.00, 'Furniture');
+('Retail', 'Store A 1 - The plaza', 'CATY','GBC', 'User A', 'Fashion', 'Brand X', 'Mens', 'Sale', 50, 50000.00, 'FMW'),
+('Retail', 'Store B', 'COTY', 'GBC', 'User D', 'Fashion', 'Brand Y', 'Kids', 'Sale', 70, 120000.00, 'FLR'),
+('Retail', 'Store C 2', 'LOREO', 'NULL', 'User A', 'Fashion', 'Brand Z', 'Women', 'Sale', 30, 90000.00, 'FCW');
 
 
 -- Calculate incentives based on sales performance
